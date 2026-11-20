@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7fb">
+  <meta name="description" content="RailEase railway reservations, live queues, and smart reallocation.">
+  <title>RailEase — Railway reservations</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="RailEase home" data-page-link="overview">
+        <span class="brand-mark">R</span>
+        <span class="brand-copy"><strong>railease</strong><small>RAILWAY, MADE SIMPLE</small></span>
+      </a>
+
+      <div class="nav-caption">WORKSPACE</div>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <button class="nav-link active" type="button" data-page-link="overview"><span class="nav-icon">⌂</span>Overview</button>
+        <button class="nav-link" type="button" data-page-link="book"><span class="nav-icon">＋</span>Book a ticket</button>
+        <button class="nav-link" type="button" data-page-link="bookings"><span class="nav-icon">▤</span>Manage bookings</button>
+        <button class="nav-link" type="button" data-page-link="trains"><span class="nav-icon">↔</span>Train directory</button>
+      </nav>
+
+      <div class="nav-caption admin-caption">MANAGEMENT</div>
+      <nav class="primary-nav" aria-label="Management navigation">
+        <button class="nav-link" type="button" data-page-link="admin"><span class="nav-icon">⚙</span>Admin &amp; demo</button>
+      </nav>
+
+      <div class="sidebar-spacer"></div>
+      <div class="support-card">
+        <span class="support-icon">✦</span>
+        <strong>Smart reallocation</strong>
+        <p>When plans change, the next eligible passenger moves up automatically.</p>
+        <button type="button" data-page-link="bookings">Track a PNR <span aria-hidden="true">→</span></button>
+      </div>
+      <div class="sidebar-foot">
+        <span class="online-dot"></span>
+        <span>Browser demo</span>
+        <span class="foot-divider">·</span>
+        <span>Saved on this device</span>
+      </div>
+    </aside>
+
+    <div class="main-shell">
+      <header class="topbar">
+        <div class="topbar-heading">
+          <div class="eyebrow">RAILEASE / <span id="breadcrumb">OVERVIEW</span></div>
+          <h1 id="page-title">Good morning</h1>
+        </div>
+        <div class="topbar-actions">
+          <span class="today-chip"><span class="calendar-icon">▦</span><span id="today-label"></span></span>
+          <button class="button button-primary button-small" type="button" data-page-link="book"><span aria-hidden="true">＋</span> New booking</button>
+          <span class="avatar" aria-label="Demo passenger">P</span>
+        </div>
+      </header>
+
+      <main id="view" class="view" tabindex="-1"></main>
+      <footer class="page-footer">
+        <span>RailEase · Advanced Data Structures demo</span>
+        <span>Reservations are stored locally in this browser</span>
+      </footer>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
